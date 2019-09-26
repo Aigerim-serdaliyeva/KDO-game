@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>KDO</title>
+  <meta name="description" content="KDO">
+  <meta name="keywords" content="KDO, Brain, brains, game, games, logic, memory, reaction, relax, family, kids, Мозг, мозги, игра, игры, логика, память, реакция, расслабление, семья, дети">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon.ico?v=12" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/main.min.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148605648-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148605648-1');
+  </script>
+  
+</head>
+
+<body id="main-page">
+
+  <div id="app" class="page-wrapper"> 
+
+    <section class="s-main">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-6">
+            <div class="s-main__phone">
+              <img src="./img/phone-big.png" alt="">
+              <video autoplay muted loop class="s-main__video">
+                <source src="./video/kdo_video_12.mp4" type="video/mp4">
+              </video>
+              <div class="s-main__overlay"></div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <a href="/" class="logo">
+              <img src="./img/KDO.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section s-work">            
+      <div class="container">
+        <div class="row justify-content-center">
+          
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="work inverse" data-value="game">
+              <div class="work__img"><img src="./img/work-boomBrains.jpg" alt=""></div>
+              <div class="work__block">
+                <div class="work__title"><span>boom </span>brains</div>
+                <div class="work__text">{{ $t("work.textBoomBrains") }}</div>
+                <div class="work__footer">
+                  <div class="work__data">20<span>19</span></div>
+                  <a href="https://apps.apple.com/us/app/boom-brains/id1478261533"  target="_blank" class="work__site"><img src="./img/arrow-website.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="work inverse" data-value="app">
+              <div class="work__img"><img src="./img/work-topSecApp2.jpg" alt=""></div>
+              <div class="work__block">
+                <div class="work__title"><span>top </span> security app</div>
+                <div class="work__text">{{ $t("work.textTSApp") }}</div>
+                <div class="work__footer">
+                  <div class="work__data">20<span>19</span></div>
+                  <a href="https://apps.apple.com/kz/app/top-security-kz/id1437243271"  target="_blank" class="work__site"><img src="./img/arrow-website.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="work inverse" data-value="site">
+              <div class="work__img"><img src="./img/work-pmg.jpg" alt=""></div>
+              <div class="work__block">
+                <div class="work__title"><span>project </span> management group</div>
+                <div class="work__text">{{ $t("work.textPMG") }}</div>
+                <div class="work__footer">
+                  <div class="work__data">20<span>19</span></div>
+                  <a href="http://pmginvest.com/"  target="_blank" class="work__site"><img src="./img/arrow-website.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="work inverse" data-value="site">
+              <div class="work__img"><div class="work__img__content"><img src="./img/work-bbh.jpg" alt=""></div></div>
+              <div class="work__block">
+                <div class="work__title"><span>BLACKBERRY</span> HILLS</div>
+                <div class="work__text">{{ $t("work.textbbh") }}</div>
+                <div class="work__footer">
+                  <div class="work__data">20<span>19</span></div>
+                  <a href="https://bbhills.kz/" target="_blank" class="work__site"><img src="./img/arrow-website.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>     
+    </section>
+
+    <section class="s-map">          
+      <div class="s-map__image">
+        <img src="./img/map.png" alt="" class="map">
+        <img src="./img/map-mobile.png" alt="" class="map-mobile">
+      </div>
+    </section>
+
+    <div class="section s-contact s-contact--bgnone inverse">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-3">
+            <a href="/" class="logo">
+              <img src="./img/logo-contact.png" alt="">
+            </a>
+          </div>
+          <div class="col-lg-9">              
+            <div class="s-contact__content">
+              <div class="contact">
+                <div class="contact__title">{{ $t("contact.contact") }}</div>
+                <div class="contact__text"><img src="./img/phone.png" alt=""><a href="tel:+77012570030" class="text-phone" id="phone_number">+7 (701) 257-00-30</a></div>
+                <div class="contact__text "><img src="./img/email-icon.png" alt=""> <a href="mailto:support@kdo.one">support@kdo.one</a></div>
+              </div>
+              <div class="contact">
+                <div class="contact__title">{{ $t("contact.address") }}</div>
+                <div class="contact__text"><img src="./img/address.png" alt="">{{ $t("contact.addressCountry") }} <br> {{ $t("contact.addressStreet") }}</div>
+              </div>
+              <div class="contact">
+                <div class="contact__title">{{ $t("contact.social") }}</div>
+                <div class="contact__text"><img src="./img/instagram.png" alt=""><a target="_blank" href="https://www.instagram.com/kdo_team/">kdo_team</a></div>
+                <div class="contact__text"><img src="./img/telegram.png" alt=""><a target="_blank" href="https://t.me/kdo_team">kdo_team</a></div>
+              </div>
+            </div>
+          </div>
+        </div>        
+        <div class="s-contact__info">All Rights Reserved  2019  «KDO»</div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/libs.min.js"></script>
+  <script src="./js/localization.js"></script>
+  <script src="./js/main.min.js"></script>
+</body>
+
+</html>
