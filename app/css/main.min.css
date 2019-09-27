@@ -333,8 +333,8 @@ html {
 
 .container {
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
@@ -352,8 +352,8 @@ html {
 
 .container-fluid {
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
   margin-right: auto;
   margin-left: auto; }
 
@@ -365,8 +365,8 @@ html {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-right: -10px;
-  margin-left: -10px; }
+  margin-right: -5px;
+  margin-left: -5px; }
 
 .no-gutters {
   margin-right: 0;
@@ -384,8 +384,8 @@ html {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 5px;
+  padding-left: 5px; }
 
 .col {
   -webkit-flex-basis: 0;
@@ -5736,10 +5736,10 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 390px;
     margin: 0 auto 20px;
     overflow: hidden; }
-    .s-work .work:hover .work__img, .s-work .work.active .work__img {
-      -webkit-transform: scale(1.01);
-          -ms-transform: scale(1.01);
-              transform: scale(1.01); }
+    .s-work .work__img {
+      padding: 10px; }
+      .s-work .work__img img {
+        border-radius: 10px; }
     .s-work .work__app {
       position: absolute;
       bottom: 20px;
@@ -5772,7 +5772,10 @@ h1, h2, h3, h4, h5, h6 {
         -webkit-box-align: center;
         -webkit-align-items: center;
             -ms-flex-align: center;
-                align-items: center; }
+                align-items: center;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
         .s-work .work__app a:hover {
           -webkit-transform: scale(1.03);
               -ms-transform: scale(1.03);
@@ -5921,7 +5924,7 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     padding: 200px 0 140px; }
     .s-main .logo {
-      margin: 0 0 130px;
+      margin: 0 auto 130px;
       width: 100%;
       display: block; }
     .s-main__content {

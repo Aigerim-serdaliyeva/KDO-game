@@ -4,9 +4,9 @@ $(document).ready(function () {
   var $top = $(".page-top");
   var $html = $("html, body");
   var $header = $(".header");
-  var $headerBurger = $(".header-burger");
-  const $burgerMenu = $('.burger-menu');
   var headerHeight = 170;
+
+  
 
 
   // забираем utm из адресной строки и пишем в sessionStorage, чтобы отправить их на сервер при form submit
