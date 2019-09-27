@@ -8,59 +8,6 @@ $(document).ready(function () {
   const $burgerMenu = $('.burger-menu');
   var headerHeight = 170;
 
-  // *** Animation of logo
-  // init controller
-    const controller = new ScrollMagic.Controller();
-
-    const backToPosition = new TimelineMax({
-      ease:Linear.easeNone,
-      paused: true
-    })
-    .to('.anim__logo', 0.6, {
-      transform: '0',
-      margin: '0'
-    })
-    .to('.anim__logo-img', 0.6, {
-      transform: '0',        
-    }, 0)
-    .to(
-      '.anim__logo-text', 0.4, {
-        opacity: '0',
-        display: 'none'
-      },
-      0
-    )
-    .to(
-      '.anim__header-text .header__language',  0.2, {
-        transform: '0'
-      }
-    )  
-    .to(
-      '.anim__header-text .header__title',  0.4, {
-        transform: '0'
-      }
-    )    
-    .to(
-      '.anim__navigation', 0.4, {
-        opacity: '1'
-      }
-    )
-    .to(
-      '.anim__main-container',
-      0.6, {
-        height: '30vh'
-      }, 0
-    )
-
-    const scene = new ScrollMagic.Scene({
-      triggerElement: "#trigger1"
-    })
-    .on('progress', () => {
-      backToPosition.play()
-    })
-    // .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-    .addTo(controller);
-
 
   // забираем utm из адресной строки и пишем в sessionStorage, чтобы отправить их на сервер при form submit
   var utms = parseGET();
@@ -107,38 +54,6 @@ $(document).ready(function () {
   $('.lang').click(function() {
     $(this).addClass('active').siblings().removeClass('active');
   })
-  
-  const $links = $(".main-menu .link a");
-  $links.click(function (e) {
-    e.preventDefault();
-    $links.parent().removeClass('active');
-    $(this).parent().addClass('active');
-    var workCategory = $(this).attr('href').slice(1);
-    showWork(workCategory);
-    closeMenu();
-    scrollToWorkSection();
-  });
-
-  // при нажатии на меню плавно скролит к соответсвующему блоку
-  function scrollToWorkSection() {
-    var top = $('.s-work').offset().top - headerHeight;
-    $html.stop().animate({ scrollTop: top }, "slow", "swing");
-  }
-
-  const $works = $('.work');
-  function showWork(workCategory = 'all') {
-    if (workCategory === 'all') {
-      $works.parent().removeClass('d-none');
-    } else {
-      $works.parent().addClass('d-none');
-      $works.filter(`[data-value="${workCategory}"]`).parent().removeClass('d-none');
-    }
-  }
-  showWork();
-
-  $top.click(function () {
-    $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
-  });
 
   // при изменении объязателных полей проверяем можно ли удалять класс error
   $("input:required, textarea:required").keyup(function () {
@@ -189,72 +104,6 @@ $(document).ready(function () {
     } else {
       e.preventDefault();
     }
-  });
-
-  $('.burger-menu__btn').click(function(e) {
-    e.preventDefault();
-    if ($burgerMenu.hasClass('burger-menu--active')) {
-      closeMenu();
-    } else {
-      showMenu();
-    }
-  });
-
-  $('.burger-menu__overlay').click(function() {
-    closeMenu();
-  })
-
-  $('.burger-menu__close').click( function() {
-    closeMenu();
-  })
-  
-  function showMenu() {
-    $header.addClass('header--opened');
-    $burgerMenu.addClass('burger-menu--active');
-  }
-
-  function closeMenu() {
-    $header.removeClass('header--opened');
-    $burgerMenu.removeClass('burger-menu--active');
-  }
-
-  $('.burger-menu').click( function() {
-    $(this).closest('.header-burger').removeClass('burger-menu--scrolled');
-  })
-
-  $('.work').click( function() {
-    $(this).find('.work__block').toggleClass('flex');
-    $(this).find('.work__img__content').stop();
-  })
-
-  const spp = 8; // 1000ms / 100px
-
-  $('.work').mouseenter( function() {
-    const $workImg = $(this).find('.work__img');
-    const $content = $(this).find('.work__img__content');
-    if (!$content || !$content.length) {
-      return;
-    }
-    const height = $workImg.height();
-    const contentHeight = $content.height();
-    if (contentHeight > height) {
-      const top = contentHeight - height;
-      const distance = top - (-$content.position().top);
-      $content.stop().animate({
-        'top': -top
-      }, spp * distance);
-    }
-  });
-
-  $('.work').mouseleave( function() {
-    const $content = $(this).find('.work__img__content');
-    if (!$content || !$content.length) {
-      return;
-    }
-    const height = 0 - $content.position().top;
-    $content.stop().animate({
-      'top': 0
-    }, spp * height);
   });
 
 });
