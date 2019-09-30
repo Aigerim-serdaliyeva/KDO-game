@@ -290,5 +290,23 @@
   }
 }
 
+.s-terms {
+  padding: 80px 0 50px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  ol {
+    margin-bottom: 20px;
+  }
+}
+
 
 @import './_media';
